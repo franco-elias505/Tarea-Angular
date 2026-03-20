@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+label{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+p{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}

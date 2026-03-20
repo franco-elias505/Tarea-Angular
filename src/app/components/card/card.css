@@ -1,0 +1,27 @@
+body{
+  
+}
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}

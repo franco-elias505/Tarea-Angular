@@ -1,0 +1,8 @@
+<form> <label>Correo</label> <input type="email" [(ngModel)]="correo" name="correo">
+<label>Fecha nacimiento</label>
+<input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento">
+
+<label>Edad</label>
+<input type="number" [(ngModel)]="edad" name="edad">
+
+<h4>Vista previa</h4> <p>{{ correo }}</p> <p>{{ fechaNacimiento }}</p> <p>{{ edad }}</p> </form>
