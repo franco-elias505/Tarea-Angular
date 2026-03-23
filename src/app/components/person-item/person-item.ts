@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Person } from '../models/person.model';
 
 @Component({
   selector: 'app-person-item',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './person-item.html',
   styleUrl: './person-item.css',
 })
 export class PersonItem {
-  @Input() correo = '';
-  @Input() fechaNacimiento = '';
-  @Input() edad = '';
+  @Input() personas: Person[] = [];
+  @Output() eliminar = new EventEmitter<number>();
+  @Output() editar = new EventEmitter<number>();
 }

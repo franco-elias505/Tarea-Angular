@@ -1,8 +1,18 @@
-<form> <label>Correo</label> <input type="email" [(ngModel)]="correo" name="correo">
-<label>Fecha nacimiento</label>
-<input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento">
+<form (ngSubmit)="guardar()">
+  <label>Correo</label>
+  <input type="email" [(ngModel)]="correo" name="correo" required>
 
-<label>Edad</label>
-<input type="number" [(ngModel)]="edad" name="edad">
+  <label>Fecha nacimiento</label>
+  <input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento" required>
 
-<h4>Vista previa</h4> <p>{{ correo }}</p> <p>{{ fechaNacimiento }}</p> <p>{{ edad }}</p> </form>
+  <label>Edad</label>
+  <input type="number" [(ngModel)]="edad" name="edad" min="0" required>
+
+  <button type="submit">{{ modoEdicion ? 'Actualizar' : 'Guardar' }}</button>
+  <button type="button" *ngIf="modoEdicion" (click)="cancelarEdicion()">Cancelar</button>
+
+  <h4>Vista previa</h4>
+  <p>{{ correo }}</p>
+  <p>{{ fechaNacimiento }}</p>
+  <p>{{ edad }}</p>
+</form>

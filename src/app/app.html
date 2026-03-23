@@ -1,5 +1,15 @@
 <div class="fila-componentes">
   <app-card [title]="title()" [image]="image()"></app-card>
-  <app-person-item [correo]="correo()" [fechaNacimiento]="fechaNacimiento()" [edad]="edad()"></app-person-item>
-  <app-person-form></app-person-form>
+
+  <app-person-item
+    [personas]="listaPersonas()"
+    (eliminar)="eliminarPersona($event)"
+    (editar)="editarPersona($event)">
+  </app-person-item>
+
+  <app-person-form
+    [personaEditar]="personaEnEdicion"
+    (personaEmit)="guardarPersona($event)"
+    (cancelar)="cancelarEdicion()">
+  </app-person-form>
 </div>

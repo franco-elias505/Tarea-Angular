@@ -1,5 +1,16 @@
 <div>
- <p>{{correo}}</p>
-<p>{{fechaNacimiento}}</p>
-<p>{{edad}}</p>
+  <h2>Personas</h2>
+
+  <p *ngIf="personas.length === 0">No hay personas registradas.</p>
+
+  <ul>
+    <li *ngFor="let person of personas; let i = index">
+      <p>Correo: {{ person.correo }}</p>
+      <p>Fecha de Nacimiento: {{ person.fechaNacimiento }}</p>
+      <p>Edad: {{ person.edad }}</p>
+
+      <button type="button" (click)="editar.emit(i)">Editar</button>
+      <button type="button" (click)="eliminar.emit(i)">Eliminar</button>
+    </li>
+  </ul>
 </div>
